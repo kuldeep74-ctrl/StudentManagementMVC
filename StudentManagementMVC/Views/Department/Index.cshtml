@@ -1,0 +1,18 @@
+﻿@model List<StudentManagementMVC.Models.Department>
+
+<h2>Departments</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Id</th>
+        <th>Department Name</th>
+    </tr>
+
+    @foreach (var department in Model)
+    {
+        <tr>
+            <td>@department.Id</td>
+            <td>@department.DepartmentName</td>
+        </tr>
+    }
+</table>

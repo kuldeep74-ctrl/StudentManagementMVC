@@ -1,0 +1,18 @@
+﻿@model List<StudentManagementMVC.Models.Course>
+
+<h2>Course List</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Id</th>
+        <th>Course Name</th>
+    </tr>
+
+    @foreach (var course in Model)
+    {
+        <tr>
+            <td>@course.Id</td>
+            <td>@course.CourseName</td>
+        </tr>
+    }
+</table>

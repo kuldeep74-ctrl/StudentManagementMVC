@@ -1,0 +1,14 @@
+﻿@model StudentManagementMVC.Models.Student
+
+@if (Model != null)
+{
+    <h2>Student Found</h2>
+
+    <p>Id : @Model.Id</p>
+    <p>Name : @Model.Name</p>
+    <p>Age : @Model.Age</p>
+}
+else
+{
+    <h2>No Student Found</h2>
+}

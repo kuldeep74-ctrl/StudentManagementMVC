@@ -1,0 +1,20 @@
+﻿@model StudentManagementMVC.Models.Department
+
+<h2>Add Department</h2>
+
+<form asp-action="Create" method="post">
+
+    <div>
+        <label>Department Name</label>
+        <input asp-for="DepartmentName" />
+        <span asp-validation-for="DepartmentName"></span>
+    </div>
+
+    <button type="submit">Save</button>
+
+</form>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

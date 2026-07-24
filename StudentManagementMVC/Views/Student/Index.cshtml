@@ -1,0 +1,28 @@
+﻿@model List<StudentManagementMVC.Models.Student>
+
+<h2>Student List</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Action</th>
+        <th>Department</th>
+    </tr>
+
+    @foreach (var student in Model)
+    {
+        <tr>
+            <td>@student.Id</td>
+            <td>@student.Name</td>
+            <td>@student.Age</td>
+           
+            <td>
+                <a asp-action="Edit" asp-route-id="@student.Id">Edit</a>
+                <a asp-action="Delete" asp-route-id="@student.Id">Delete</a>
+            </td>
+            <td>@student.Department?.DepartmentName</td>
+        </tr>
+    }
+</table>
